@@ -89,8 +89,8 @@ console.log(findTax(1600000)); // Output: 480000 (30% tax) */
 
     let sum = 0;
     for (let i = 0; i < Math.max(strN1.length, strN2.length); i++) {
-        const digitN1 = parseInt(strN1[i]) || 0; // If undefined, consider it as 0
-        const digitN2 = parseInt(strN2[i]) || 0;
+        const digitN1 = parseInt(strN1[i][strN1.length-1-i]) || 0; // If undefined, consider it as 0
+        const digitN2 = parseInt(strN2[i][strN2.length-1-i]) || 0;
         sum += digitN1 * digitN2;
     }
     return sum;
